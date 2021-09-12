@@ -15,28 +15,25 @@ from random import randint
 # Begin your solution here...
 
 
-def main() -> None:
-    """The entrypoint of the program, when run as a module."""
-    print("Your fortune cookie says...")
-    print(fortune_cookie())
-    print("Now, go spread positive vibes!")
+print("Your fortune cookie says...")
 
 
-def fortune_cookie() -> str:
-    """Fortune cookie."""
-    x = randint(1, 100)
-    if x <= 25:
-        return "Your life will be peaceful."
+Fortune_1: str = "You will meet a good friend."
+Fortune_2: str = "The best year of your life is about to approach you."
+Fortune_3: str = "You will give hapiness to a loved one."
+Fortune_4: str = "You will learn to love yourself."
+
+
+x: int = randint(1, 100)
+if x <= 25:
+    print(Fortune_1)
+else:
+    if x <= 50:
+        print(Fortune_2)
+    if x <= 75:
+        print(Fortune_3)  
     else:
-        if x <= 50:
-            return "A beautiful, smart, and loving person will be coming into your life."
-        else:
-            if x <= 75:
-                return "Your life will be beautiful." 
-                
-            else:
-                return "Soon life will become more interesting."
+        print(Fortune_4)
 
 
-if __name__ == "__main__":
-    main()
+print("Now, go spread positive vibes!")

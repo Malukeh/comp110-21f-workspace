@@ -16,4 +16,4 @@ while i < len(User_string):
         count = count + 1
     i = i + 1
 
-print("Count:" + str(count))
+print("Count: " + str(count))
