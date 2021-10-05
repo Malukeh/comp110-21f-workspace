@@ -6,13 +6,19 @@ __author__ = "730319407"
 
 
 def all(main_list: 'list[int]', i: int) -> bool:
+    """Finding if integer in list is the same as given integer."""
+    if len(main_list) == 0:
+        return False
     while len(main_list) > 0:
-        if i == main_list.pop(0):
-            return True
-    return False
+        if i != main_list.pop():
+            return False
+    return True
 
 
 def is_equal(list1: 'list[int]', list2: 'list[int]') -> bool:
+    """Finding if every element at every index is equal in both lists."""
+    if len(list1) != len(list2):
+        return False
     while len(list1) > 0:
         if list1.pop(0) != list2.pop(0):
             return False
@@ -20,6 +26,7 @@ def is_equal(list1: 'list[int]', list2: 'list[int]') -> bool:
 
 
 def max(input: 'list[int]') -> int:
+    """Finding maximum integer."""
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     max_int = input.pop(0)
@@ -29,3 +36,6 @@ def max(input: 'list[int]') -> int:
         else:
             input.pop(0)
     return max_int
+
+
+print(all([2, 2], 2))
